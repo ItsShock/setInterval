@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>COCO</title>
+  </head>
+  <body>
+    <button id="startInterval">Click me</button>
+    <h1 id="counter">0</h1>
+    <script>
+      let counter = 0;
+
+      function startTimer() {
+        let h1 = document.getElementById('counter');
+
+        setInterval(() => {
+          h1.innerText = counter++;
+        }, 1000)
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        let button = document.getElementById('startInterval');
+        button.addEventListener('click', startTimer);
+      });
+    </script>
+  </body>
+</html>
